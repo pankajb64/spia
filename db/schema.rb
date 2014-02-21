@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140221163515) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "pads", force: true do |t|
     t.string   "base36_id"
     t.text     "contents"
