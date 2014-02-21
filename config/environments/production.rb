@@ -22,7 +22,7 @@ Spia::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
 
-  config.assets.precompile = ['*.js', , '*.js.coffee', '*.css', '*.css.scss']
+  config.assets.precompile = ['*.js', '*.js.coffee', '*.css', '*.css.scss']
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
