@@ -1,0 +1,5 @@
+%h1 Start editing here
+= text_area(:pad, :contents, cols: 40, rows: 20)
+%button#save{ :onclick => 'save_data()' } Save
+%a{ 'data-method' => 'delete', :href => "/#{@pad.base36_id}"} Delete
+#key{:value => "#{@pad.base36_id}" }
