@@ -1,3 +1,6 @@
+= content_for :head do
+  = javascript_include_tag 'edit_pad'
+
 h1 Start editing here
 = text_area(:pad, :contents, cols: 40, rows: 20)
 a id="save" href = "#" Save

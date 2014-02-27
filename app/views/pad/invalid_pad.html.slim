@@ -1,4 +1,3 @@
-h3 
-  Sorry that pad doesn't exist. You can
-  = link_to "Create a new pad", pad_new_path
-  instead
+h3 == "Sorry that pad doesn't exist. You can #{link_to 'Create a new pad', pad_new_path} instead"
+/ You can use = or ==. = escapes html, so the above link would be rendered as <a href= ... instead of creating actual links. 
+/ == doesnt escape html, so that does the job
