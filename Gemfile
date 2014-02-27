@@ -5,25 +5,6 @@ gem 'rails', '4.0.3'
 
 gem 'multi_json', '~> 1.8.4'
 
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-gem 'pg'
-
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -47,7 +28,34 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem "haml", "~> 4.0.5"
-gem "html2haml"
-gem "haml-contrib"
-gem "haml-rails"
+#gem "haml", "~> 4.0.5"
+#gem "html2haml"
+#gem "haml-contrib"
+#gem "haml-rails"
+
+gem "slim-rails", "~> 2.1.0"
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'byebug'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'simplecov'
+end
+
+group :production do
+  gem 'pg'
+end
+
+group :assets do
+  #gem 'therubyracer', platforms: :ruby           
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'coffee-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
+end
+
+gem 'jquery-rails'
